@@ -103,3 +103,8 @@ resource "aws_iam_instance_profile" "profile_example" {
  name = "${local.name_prefix}-profile-t1"
  role = aws_iam_role.role_example.name
 }
+
+output "iam_instance_profile_name" {
+  description = "ID of the iam_instance_profile"
+  value       = aws_iam_instance_profile.profile_example.id
+}
